@@ -24,7 +24,7 @@
     "@solana/spl-token-registry": "^0.2.4574",
     "axios": "^1.13.5",
     "base58": "^2.0.1",
-    "bn.js": "^5.2.2",
+    "bn.js": "^5.2.3",
     "csv-parse": "^6.1.0",
     "decimals": "^1.0.0",
     "jito-js-rpc": "^0.2.2",
