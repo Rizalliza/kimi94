@@ -1,0 +1,228 @@
+1️⃣ Structural Invariants (Pre-Route Graph)
+
+These prevent invalid pools from ever entering the system.
+
+CLMM / Whirlpool (Hard Requirements)
+
+Reject pool unless:
+
+liquidity > 0
+
+sqrtPriceX64 > 0
+
+tickSpacing > 0
+
+tickArrays exist
+
+at least one initialized tick
+
+current tick within initialized range
+
+Add this:
+
+function assertValidCLMM(raw) {
+    if (!raw.liquidity || BigInt(raw.liquidity) <= 0n)
+        throw new Error('CLMM_ZERO_LIQUIDITY');
+
+    if (!raw.sqrtPriceX64 || raw.sqrtPriceX64.isZero?.())
+        throw new Error('CLMM_INVALID_PRICE');
+
+    if (!raw.tickArrays?.length)
+        throw new Error('CLMM_NO_TICKS');
+}
+
+CPMM
+
+Reject unless:
+
+amountA > 0
+
+amountB > 0
+
+feeRate defined
+
+DLMM
+
+Reject unless:
+
+activeId defined
+
+at least one bin has non-zero liquidity
+
+2️⃣ Economic Invariants (Before Simulation)
+
+These prevent economically invalid routes.
+
+For each route:
+
+A. No token duplication loops
+
+Reject if route reuses same pool twice.
+
+B. No self-pairs
+
+Reject if any leg has identical token mints.
+
+C. Decimal consistency
+
+Before sim:
+
+if (amountInRaw <= 0n)
+    throw new Error('INVALID_INPUT_SIZE');
+
+3️⃣ Simulation Envelope (Hard Mathematical Guards)
+
+This is the most important part.
+
+After simulating each leg:
+
+Per-Leg Guard
+if (amountOutRaw <= 0n)
+    throw new Error('NEGATIVE_SWAP');
+
+if (amountOutRaw > amountInRaw * 3n)
+    throw new Error('EXPLOSIVE_SWAP');
+
+if (amountOutRaw < amountInRaw / 3n)
+    throw new Error('COLLAPSE_SWAP');
+
+
+3x is already extreme.
+Real markets rarely exceed ±20% per hop.
+
+Route-Level Guard
+
+After full route:
+
+if (finalOutRaw > amountInRaw * 2n)
+    reject;
+
+if (finalOutRaw < amountInRaw / 2n)
+    reject;
+
+
+No 3-hop route yields 2x.
+
+Ever.
+
+4️⃣ Liquidity Utilization Guard
+
+This eliminates invisible zero-liquidity ticks.
+
+For each leg compute:
+
+utilization = amountIn / activeLiquidity
+
+
+Reject if:
+
+utilization > 0.25
+
+
+25% of active liquidity is already extremely aggressive.
+
+Production bots use < 5%.
+
+5️⃣ Impact Guard
+
+Reject route if:
+
+totalImpactBps > 150
+
+
+Anything above 150 bps across 3 legs is not arbitrage.
+It is self-impact distortion.
+
+6️⃣ Statistical Sanity Layer
+
+Maintain rolling statistics:
+
+medianProfitBps
+
+medianImpactBps
+
+medianAmountOutRatio
+
+If a new route is:
+
+> 5 standard deviations from rolling mean
+
+
+Reject.
+
+This protects against:
+
+corrupted state
+
+API desync
+
+partial pool updates
+
+stale tick arrays
+
+7️⃣ Deterministic Output Validation
+
+Final acceptance rule:
+
+profitRaw > 0
+profitBps >= 2
+totalImpactBps <= 150
+utilization <= 25%
+no guard triggered
+
+
+Nothing else.
+
+No heuristic scoring.
+No fake USD logic.
+
+8️⃣ Execution Sizing Envelope
+
+When optimizing size:
+
+Only allow size where:
+
+maxLegImpact <= 80 bps
+
+
+And:
+
+pSafe = exp(-impact / 80)
+pSafe >= 0.4
+
+
+This keeps you out of MEV death zones.
+
+9️⃣ Deterministic Logging
+
+Every rejection must log a specific code:
+
+REJECT_ZERO_LIQ
+REJECT_EXPLOSIVE
+REJECT_COLLAPSE
+REJECT_HIGH_IMPACT
+REJECT_HIGH_UTIL
+
+
+If absurd numbers reappear,
+you will see which guard failed.
+
+No guessing ever again.
+
+🔬 Why This Works
+
+Absurd arbitrage explosions can only come from:
+
+Zero liquidity
+
+Mis-scaled decimals
+
+Wrong direction math
+
+Tick array gaps
+
+Fake TVL scoring
+
+Arithmetic overflow
+
+This envelope blocks all 6.

@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-02-22T08:39:25.085Z",
+  "totalRoutes": 1,
+  "rejected": 0,
+  "passed": 1,
+  "submitted": 1,
+  "minProfitBps": 30,
+  "routes": [
+    {
+      "rank": 1,
+      "filename": "route_001.json",
+      "profitBps": 47,
+      "path": "SOL→RAY→USDC→SOL"
+    }
+  ]
+}

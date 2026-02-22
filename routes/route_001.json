@@ -1,0 +1,67 @@
+{
+  "flashloanMint": "So11111111111111111111111111111111111111112",
+  "flashloanAmount": "10000000000",
+  "expectedProfit": "47223230",
+  "expectedOutput": "10047223230",
+  "rank": 1,
+  "path": [
+    "SOL",
+    "RAY",
+    "USDC",
+    "SOL"
+  ],
+  "tokens": [
+    "So11111111111111111111111111111111111111112",
+    "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+  ],
+  "profitBps": 47,
+  "profitPercent": "0.47",
+  "totalSlippageBps": 46,
+  "swaps": [
+    {
+      "leg": 1,
+      "poolAddress": "AVs9TA4nWDzfPJE9gGVNJMVhcQy3V9PGazuz33BfG2RA",
+      "poolType": "unknown",
+      "poolDex": "unknown",
+      "direction": "B2A",
+      "from": "SOL",
+      "to": "RAY",
+      "amountIn": "10000000000",
+      "amountOut": "1306152831",
+      "feeBps": 25,
+      "impactBps": 8,
+      "slippageBps": 18
+    },
+    {
+      "leg": 2,
+      "poolAddress": "6UmmUiYoBjSrhakAobJw8BvkmJtDVxaeBtbt7rxWo1mg",
+      "poolType": "unknown",
+      "poolDex": "unknown",
+      "direction": "A2B",
+      "from": "RAY",
+      "to": "USDC",
+      "amountIn": "1306152831",
+      "amountOut": "858120573",
+      "feeBps": 25,
+      "impactBps": 6,
+      "slippageBps": 16
+    },
+    {
+      "leg": 3,
+      "poolAddress": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+      "poolType": "unknown",
+      "poolDex": "unknown",
+      "direction": "B2A",
+      "from": "USDC",
+      "to": "SOL",
+      "amountIn": "858120573",
+      "amountOut": "10047223230",
+      "feeBps": 4,
+      "impactBps": 0,
+      "slippageBps": 12
+    }
+  ],
+  "generatedAt": "2026-02-22T08:39:25.080Z",
+  "minProfitBps": 30
+}

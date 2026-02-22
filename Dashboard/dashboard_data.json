@@ -1,0 +1,1266 @@
+{
+  "timestamp": "2026-02-22T17:29:52.244Z",
+  "totalRoutes": 24,
+  "profitableRoutes": 1,
+  "bestProfitBps": 2320,
+  "bestProfitSol": 2.320347395,
+  "inputSol": 1,
+  "bestRoutes": [
+    {
+      "rank": 1,
+      "path": "SOL → USDC → USDT → SOL",
+      "feasible": true,
+      "netProfitBps": 2320,
+      "inputLamports": 10000000000,
+      "outputLamports": 12320347395,
+      "totalCostBps": 39,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 294456646,
+          "feeBps": 4,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "USDT",
+          "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 294456646,
+          "outAmount": 455224859,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDT",
+          "to": "SOL",
+          "pool": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 455224859,
+          "outAmount": 12320347395,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "path": "SOL → RAY → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": 0,
+      "inputLamports": 1000000000,
+      "outputLamports": 0,
+      "totalCostBps": 0,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": []
+    },
+    {
+      "rank": 3,
+      "path": "SOL → mSOL → jitoSOL → SOL",
+      "feasible": false,
+      "netProfitBps": -2,
+      "inputLamports": 10000000000,
+      "outputLamports": 9997395599,
+      "totalCostBps": 50,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "mSOL",
+          "pool": "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 7351555386,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "mSOL",
+          "to": "jitoSOL",
+          "pool": "8dxebMPEZjYJvE5JfC9iicZt9pkATBLW1PFgRHi5wGGv",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 7351555386,
+          "outAmount": 7917287668,
+          "feeBps": 1,
+          "slippageBps": 26
+        },
+        {
+          "leg": 3,
+          "from": "jitoSOL",
+          "to": "SOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 7917287668,
+          "outAmount": 9997395599,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "path": "SOL → cbbtcf..iMij → 3NZ9JM..qmJh → SOL",
+      "feasible": false,
+      "netProfitBps": -21,
+      "inputLamports": 10000000000,
+      "outputLamports": 9978076221,
+      "totalCostBps": 321,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "cbbtcf..iMij",
+          "pool": "CeaZcxBNLpJWtxzt58qQmfMBtJY8pQLvursXTJYGQpbN",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 1232374,
+          "feeBps": 16,
+          "slippageBps": 297
+        },
+        {
+          "leg": 2,
+          "from": "cbbtcf..iMij",
+          "to": "3NZ9JM..qmJh",
+          "pool": "4v8ufj8Hj7UvFgtofQJAtzUud5xomwZfEqfCTHZ4wM72",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 1232374,
+          "outAmount": 1235772,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "3NZ9JM..qmJh",
+          "to": "SOL",
+          "pool": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 1235772,
+          "outAmount": 9978076221,
+          "feeBps": 5,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "path": "SOL → USDC → cbbtcf..iMij → SOL",
+      "feasible": false,
+      "netProfitBps": -22,
+      "inputLamports": 10000000000,
+      "outputLamports": 9977818773,
+      "totalCostBps": 184,
+      "slippageWarning": {
+        "level": "HIGH",
+        "emoji": "🟠"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "cbbtcf..iMij",
+          "pool": "HxA6SKW5qA4o12fjVgTpXdq2YnZ5Zv1s7SB4FFomsyLM",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 1233622,
+          "feeBps": 4,
+          "slippageBps": 145
+        },
+        {
+          "leg": 3,
+          "from": "cbbtcf..iMij",
+          "to": "SOL",
+          "pool": "CeaZcxBNLpJWtxzt58qQmfMBtJY8pQLvursXTJYGQpbN",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 1233622,
+          "outAmount": 9977818773,
+          "feeBps": 16,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "path": "SOL → cbbtcf..iMij → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -26,
+      "inputLamports": 10000000000,
+      "outputLamports": 9973226437,
+      "totalCostBps": 321,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "cbbtcf..iMij",
+          "pool": "CeaZcxBNLpJWtxzt58qQmfMBtJY8pQLvursXTJYGQpbN",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 1232374,
+          "feeBps": 16,
+          "slippageBps": 297
+        },
+        {
+          "leg": 2,
+          "from": "cbbtcf..iMij",
+          "to": "USDC",
+          "pool": "HxA6SKW5qA4o12fjVgTpXdq2YnZ5Zv1s7SB4FFomsyLM",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 1232374,
+          "outAmount": 831743256,
+          "feeBps": 4,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 831743256,
+          "outAmount": 9973226437,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "path": "SOL → USD1tt..EmuB → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -28,
+      "inputLamports": 10000000000,
+      "outputLamports": 9971050381,
+      "totalCostBps": 36,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USD1tt..EmuB",
+          "pool": "AQAGYQsdU853WAKhXM79CgNdoyhrRwXvYHX6qrDyC1FS",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 832323475,
+          "feeBps": 25,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "USD1tt..EmuB",
+          "to": "USDC",
+          "pool": "BCDdHonby65iduz3Ev3c9v5XjNkzyu5e56KRFHpBM4T9",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 832323475,
+          "outAmount": 831561777,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 831561777,
+          "outAmount": 9971050381,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "path": "SOL → USDC → USD1tt..EmuB → SOL",
+      "feasible": false,
+      "netProfitBps": -31,
+      "inputLamports": 10000000000,
+      "outputLamports": 9968572402,
+      "totalCostBps": 51,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "USD1tt..EmuB",
+          "pool": "BCDdHonby65iduz3Ev3c9v5XjNkzyu5e56KRFHpBM4T9",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 833897568,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USD1tt..EmuB",
+          "to": "SOL",
+          "pool": "AQAGYQsdU853WAKhXM79CgNdoyhrRwXvYHX6qrDyC1FS",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 833897568,
+          "outAmount": 9968572402,
+          "feeBps": 25,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "path": "SOL → USDC → RAY → SOL",
+      "feasible": false,
+      "netProfitBps": -406,
+      "inputLamports": 10000000000,
+      "outputLamports": 9593193480,
+      "totalCostBps": 73,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "RAY",
+          "pool": "6UmmUiYoBjSrhakAobJw8BvkmJtDVxaeBtbt7rxWo1mg",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 1260892571,
+          "feeBps": 25,
+          "slippageBps": 16
+        },
+        {
+          "leg": 3,
+          "from": "RAY",
+          "to": "SOL",
+          "pool": "AVs9TA4nWDzfPJE9gGVNJMVhcQy3V9PGazuz33BfG2RA",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "A2B",
+          "inAmount": 1260892571,
+          "outAmount": 9593193480,
+          "feeBps": 25,
+          "slippageBps": 16
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "path": "SOL → RAY → USDT → SOL",
+      "feasible": false,
+      "netProfitBps": -1980,
+      "inputLamports": 10000000000,
+      "outputLamports": 8019982695,
+      "totalCostBps": 83,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "RAY",
+          "pool": "AVs9TA4nWDzfPJE9gGVNJMVhcQy3V9PGazuz33BfG2RA",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "B2A",
+          "inAmount": 10000000000,
+          "outAmount": 1306152831,
+          "feeBps": 25,
+          "slippageBps": 18
+        },
+        {
+          "leg": 2,
+          "from": "RAY",
+          "to": "USDT",
+          "pool": "DVa7Qmb5ct9RCpaU7UTpSaf3GVMYz17vNVU67XpdCRut",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "A2B",
+          "inAmount": 1306152831,
+          "outAmount": 858584890,
+          "feeBps": 25,
+          "slippageBps": 18
+        },
+        {
+          "leg": 3,
+          "from": "USDT",
+          "to": "SOL",
+          "pool": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 858584890,
+          "outAmount": 8019982695,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "path": "SOL → jitoSOL → mSOL → SOL",
+      "feasible": false,
+      "netProfitBps": -3399,
+      "inputLamports": 10000000000,
+      "outputLamports": 6600540250,
+      "totalCostBps": 50,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "jitoSOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 7917761061,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "jitoSOL",
+          "to": "mSOL",
+          "pool": "8dxebMPEZjYJvE5JfC9iicZt9pkATBLW1PFgRHi5wGGv",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 7917761061,
+          "outAmount": 4853402028,
+          "feeBps": 1,
+          "slippageBps": 26
+        },
+        {
+          "leg": 3,
+          "from": "mSOL",
+          "to": "SOL",
+          "pool": "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 4853402028,
+          "outAmount": 6600540250,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "path": "SOL → 3NZ9JM..qmJh → cbbtcf..iMij → SOL",
+      "feasible": false,
+      "netProfitBps": -4692,
+      "inputLamports": 10000000000,
+      "outputLamports": 5307120827,
+      "totalCostBps": 465,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "3NZ9JM..qmJh",
+          "pool": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 658092,
+          "feeBps": 5,
+          "slippageBps": 441
+        },
+        {
+          "leg": 2,
+          "from": "3NZ9JM..qmJh",
+          "to": "cbbtcf..iMij",
+          "pool": "4v8ufj8Hj7UvFgtofQJAtzUud5xomwZfEqfCTHZ4wM72",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 658092,
+          "outAmount": 656149,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "cbbtcf..iMij",
+          "to": "SOL",
+          "pool": "CeaZcxBNLpJWtxzt58qQmfMBtJY8pQLvursXTJYGQpbN",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 656149,
+          "outAmount": 5307120827,
+          "feeBps": 16,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "path": "SOL → jitoSOL → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -5755,
+      "inputLamports": 10000000000,
+      "outputLamports": 4244744399,
+      "totalCostBps": 83,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "jitoSOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 7917761061,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "jitoSOL",
+          "to": "USDC",
+          "pool": "5hWJUNTtEtKmKgDXpthJXXRRmJrz5vJ7uJzrUNVdrwLg",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 7917761061,
+          "outAmount": 354000665,
+          "feeBps": 5,
+          "slippageBps": 59
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 354000665,
+          "outAmount": 4244744399,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "path": "SOL → 3NZ9JM..qmJh → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -8952,
+      "inputLamports": 10000000000,
+      "outputLamports": 1047354113,
+      "totalCostBps": 465,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "3NZ9JM..qmJh",
+          "pool": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 658092,
+          "feeBps": 5,
+          "slippageBps": 441
+        },
+        {
+          "leg": 2,
+          "from": "3NZ9JM..qmJh",
+          "to": "USDC",
+          "pool": "55BrDTCLWayM16GwrMEQU57o4PTm6ceF9wavSdNZcEiy",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 658092,
+          "outAmount": 87346494,
+          "feeBps": 5,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 87346494,
+          "outAmount": 1047354113,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "path": "SOL → USDC → 27G8Mt..idD4 → SOL",
+      "feasible": false,
+      "netProfitBps": -9001,
+      "inputLamports": 10000000000,
+      "outputLamports": 998870979,
+      "totalCostBps": 58,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "27G8Mt..idD4",
+          "pool": "6NUiVmsNjsi4AfsMsEiaezsaV9N4N1ZrD4jEnuWNRvyb",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 22850819,
+          "feeBps": 2,
+          "slippageBps": 19
+        },
+        {
+          "leg": 3,
+          "from": "27G8Mt..idD4",
+          "to": "SOL",
+          "pool": "6a3m2EgFFKfsFuQtP4LJJXPcAe3TQYXNyHUjjZpUxYgd",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 22850819,
+          "outAmount": 998870979,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "path": "SOL → USDC → jitoSOL → SOL",
+      "feasible": false,
+      "netProfitBps": -9037,
+      "inputLamports": 10000000000,
+      "outputLamports": 962212736,
+      "totalCostBps": 69,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "jitoSOL",
+          "pool": "5hWJUNTtEtKmKgDXpthJXXRRmJrz5vJ7uJzrUNVdrwLg",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 833301867,
+          "outAmount": 762009729,
+          "feeBps": 5,
+          "slippageBps": 30
+        },
+        {
+          "leg": 3,
+          "from": "jitoSOL",
+          "to": "SOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 762009729,
+          "outAmount": 962212736,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "path": "SOL → jitoSOL → METAew..Y18m → SOL",
+      "feasible": false,
+      "netProfitBps": -9158,
+      "inputLamports": 10000000000,
+      "outputLamports": 841500024,
+      "totalCostBps": 37,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "jitoSOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 7917761061,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "jitoSOL",
+          "to": "METAew..Y18m",
+          "pool": "GExy9FLjGXMLRxNr4MMYFKG6dwXbepidB7oELNpopcRD",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 7917761061,
+          "outAmount": 2324089181,
+          "feeBps": 16,
+          "slippageBps": 13
+        },
+        {
+          "leg": 3,
+          "from": "METAew..Y18m",
+          "to": "SOL",
+          "pool": "BxRhW4q1wTRwJkJ1C4NR4yJCRL2uusoju4g1bVenspZK",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 2324089181,
+          "outAmount": 841500024,
+          "feeBps": 16,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "path": "SOL → USDT → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -9250,
+      "inputLamports": 10000000000,
+      "outputLamports": 749208573,
+      "totalCostBps": 36,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDT",
+          "pool": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 62488206,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "USDT",
+          "to": "USDC",
+          "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 62488206,
+          "outAmount": 62481956,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 62481956,
+          "outAmount": 749208573,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "path": "SOL → USDT → RAY → SOL",
+      "feasible": false,
+      "netProfitBps": -9281,
+      "inputLamports": 10000000000,
+      "outputLamports": 718655280,
+      "totalCostBps": 46,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDT",
+          "pool": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 62488206,
+          "feeBps": 1,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "USDT",
+          "to": "RAY",
+          "pool": "DVa7Qmb5ct9RCpaU7UTpSaf3GVMYz17vNVU67XpdCRut",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "B2A",
+          "inAmount": 62488206,
+          "outAmount": 94403367,
+          "feeBps": 25,
+          "slippageBps": 16
+        },
+        {
+          "leg": 3,
+          "from": "RAY",
+          "to": "SOL",
+          "pool": "AVs9TA4nWDzfPJE9gGVNJMVhcQy3V9PGazuz33BfG2RA",
+          "dex": "raydium",
+          "type": "cpmm",
+          "direction": "A2B",
+          "inAmount": 94403367,
+          "outAmount": 718655280,
+          "feeBps": 25,
+          "slippageBps": 16
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "path": "SOL → BONK → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -9669,
+      "inputLamports": 10000000000,
+      "outputLamports": 330017473,
+      "totalCostBps": 542,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "BONK",
+          "pool": "3ne4mWqdYuNiYrYZC9TrA3FcfuFdErghH97vNPbjicr1",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 674865235240,
+          "feeBps": 30,
+          "slippageBps": 30
+        },
+        {
+          "leg": 2,
+          "from": "BONK",
+          "to": "USDC",
+          "pool": "8QaXeHBrShJTdtN1rWCccBxpSVvKksQ2PCu5nufb2zbk",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 674865235240,
+          "outAmount": 27522555,
+          "feeBps": 30,
+          "slippageBps": 500
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 27522555,
+          "outAmount": 330017473,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "path": "SOL → 27G8Mt..idD4 → USDC → SOL",
+      "feasible": false,
+      "netProfitBps": -9700,
+      "inputLamports": 10000000000,
+      "outputLamports": 299834701,
+      "totalCostBps": 86,
+      "slippageWarning": {
+        "level": "MEDIUM",
+        "emoji": "🟡"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "27G8Mt..idD4",
+          "pool": "6a3m2EgFFKfsFuQtP4LJJXPcAe3TQYXNyHUjjZpUxYgd",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 228571384,
+          "feeBps": 4,
+          "slippageBps": 62
+        },
+        {
+          "leg": 2,
+          "from": "27G8Mt..idD4",
+          "to": "USDC",
+          "pool": "6NUiVmsNjsi4AfsMsEiaezsaV9N4N1ZrD4jEnuWNRvyb",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 228571384,
+          "outAmount": 25005394,
+          "feeBps": 2,
+          "slippageBps": 12
+        },
+        {
+          "leg": 3,
+          "from": "USDC",
+          "to": "SOL",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 25005394,
+          "outAmount": 299834701,
+          "feeBps": 4,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "path": "SOL → METAew..Y18m → jitoSOL → SOL",
+      "feasible": false,
+      "netProfitBps": -9775,
+      "inputLamports": 10000000000,
+      "outputLamports": 224513387,
+      "totalCostBps": 37,
+      "slippageWarning": {
+        "level": "LOW",
+        "emoji": "🟢"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "METAew..Y18m",
+          "pool": "BxRhW4q1wTRwJkJ1C4NR4yJCRL2uusoju4g1bVenspZK",
+          "dex": "raydium",
+          "type": "clmm",
+          "direction": "B2A",
+          "inAmount": 10000000000,
+          "outAmount": 10591100009,
+          "feeBps": 16,
+          "slippageBps": 12
+        },
+        {
+          "leg": 2,
+          "from": "METAew..Y18m",
+          "to": "jitoSOL",
+          "pool": "GExy9FLjGXMLRxNr4MMYFKG6dwXbepidB7oELNpopcRD",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10591100009,
+          "outAmount": 177799955,
+          "feeBps": 16,
+          "slippageBps": 13
+        },
+        {
+          "leg": 3,
+          "from": "jitoSOL",
+          "to": "SOL",
+          "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 177799955,
+          "outAmount": 224513387,
+          "feeBps": 1,
+          "slippageBps": 12
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "path": "SOL → USDC → BONK → SOL",
+      "feasible": false,
+      "netProfitBps": -9783,
+      "inputLamports": 10000000000,
+      "outputLamports": 216253568,
+      "totalCostBps": 158,
+      "slippageWarning": {
+        "level": "HIGH",
+        "emoji": "🟠"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "BONK",
+          "pool": "8QaXeHBrShJTdtN1rWCccBxpSVvKksQ2PCu5nufb2zbk",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 296481672955,
+          "feeBps": 30,
+          "slippageBps": 13
+        },
+        {
+          "leg": 3,
+          "from": "BONK",
+          "to": "SOL",
+          "pool": "3ne4mWqdYuNiYrYZC9TrA3FcfuFdErghH97vNPbjicr1",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 296481672955,
+          "outAmount": 216253568,
+          "feeBps": 30,
+          "slippageBps": 118
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "path": "SOL → USDC → 3NZ9JM..qmJh → SOL",
+      "feasible": false,
+      "netProfitBps": -9865,
+      "inputLamports": 10000000000,
+      "outputLamports": 134720311,
+      "totalCostBps": 539,
+      "slippageWarning": {
+        "level": "CRITICAL",
+        "emoji": "🔴"
+      },
+      "legs": [
+        {
+          "leg": 1,
+          "from": "SOL",
+          "to": "USDC",
+          "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "A2B",
+          "inAmount": 10000000000,
+          "outAmount": 833301867,
+          "feeBps": 4,
+          "slippageBps": 27
+        },
+        {
+          "leg": 2,
+          "from": "USDC",
+          "to": "3NZ9JM..qmJh",
+          "pool": "55BrDTCLWayM16GwrMEQU57o4PTm6ceF9wavSdNZcEiy",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 833301867,
+          "outAmount": 16684,
+          "feeBps": 5,
+          "slippageBps": 500
+        },
+        {
+          "leg": 3,
+          "from": "3NZ9JM..qmJh",
+          "to": "SOL",
+          "pool": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+          "dex": "orca",
+          "type": "whirlpool",
+          "direction": "B2A",
+          "inAmount": 16684,
+          "outAmount": 134720311,
+          "feeBps": 5,
+          "slippageBps": 12
+        }
+      ]
+    }
+  ]
+}
